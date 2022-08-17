@@ -14,7 +14,7 @@ const Cadastro = () => {
 
     return (
         <>
-                 <Container>
+            <Container>
                 <h1 className="tituloLogin">Cadastre-se</h1>
                 <Row className="mt-5">
                     <Col lg={5} md={6} sm={12} className=" formulario p-5 m-auto shadow-sm rounded-lg">
@@ -26,16 +26,17 @@ const Cadastro = () => {
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Senha</Form.Label>
                                 <Form.Control type="password" required id="senha" placeholder="Digite sua senha..." />
-                                <button onClick={mostrarSenha} type="button">Apresentar senha</button>
+                                <button className="botaoLogin" onClick={mostrarSenha} type="button">Apresentar senha</button>
+                                <br></br>
                                 <Form.Label>Confirme sua Senha</Form.Label>
                                 <Form.Control type="password" required id="senha" placeholder="Digite sua senha..." />
-                                <button onClick={mostrarSenha} type="button">Apresentar senha</button>
+                                <button className="botaoLogin" onClick={mostrarSenha} type="button">Apresentar senha</button>
                             </Form.Group>
                             <button className="botaoLogin" variant="success btn-block" type="submit">
                                 Login
                             </button>
                         </Form>
-                            <Link to="/cadastro">Cadastre-se</Link>
+                        <Link to="/cadastro">Cadastre-se</Link>
                     </Col>
                 </Row>
             </Container>

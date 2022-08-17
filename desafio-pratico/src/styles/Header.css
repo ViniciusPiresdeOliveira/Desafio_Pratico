@@ -3,27 +3,42 @@ header {
     width: 100%;
     z-index: 1;
 }
+.adicionarSkill img{
+    background-color: #232035;
+    cursor: pointer;
+    width: 58px;
+}
 
 .header {
     background-color: #232035;
     padding: 1% 5%;
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 2em;
+    /* text-align: center; */
     font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     z-index: 1;
 }
 
-.dark-mode .header {
-    background-image: linear-gradient(#831d1c, #831d1c, #831d1c);
+.botaoSair button{
+    background-color: #232035;
+    border-width: 0;
+    color: white;
+    font-weight: bold;
+
+}
+
+.botaoSair button:hover{
+color: #ffffffa4;
+
 }
 
 .home a:-webkit-any-link {
     color: white;
+    background-color: #232035;
     text-decoration: none;
-    padding: 1%;
+    padding: 5%;
 }
 
 .home a:-webkit-any-link::selection {
@@ -39,29 +54,6 @@ header {
     color: #ffffffa4;
 }
 
-.dark-mode .home a:-webkit-any-link {
-    color: #dca406;
-    text-decoration: none;
-    padding: 1%;
-}
-
-.dark-mode .home a:-webkit-any-link::selection {
-    background-color: #dca406;
-    color: #831d1c;
-}
-
-.dark-mode .home a:-webkit-any-link:hover {
-    color: #dca306a8;
-}
-
-.dark-mode .home a:-webkit-any-link:focus {
-    color: #dca306a8;
-}
-
 .home a:-webkit-any-link:focus-visible {
     outline: 4px solid red;
-}
-
-.dark-mode .home a:-webkit-any-link:focus-visible {
-    outline: 4px solid #00ff00;
 }

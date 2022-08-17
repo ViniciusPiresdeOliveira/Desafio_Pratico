@@ -1,0 +1,45 @@
+.modal-content{
+    margin-top: 20%;
+    background-color: #585988;
+}
+
+.containerModal{
+    background-color: transparent;
+}
+
+.close{
+    text-align: right;
+    border-width: 0;
+    margin-right: 10px;
+    background-color: #585988;
+    color: white;
+}
+
+.informacoesAlteradas{
+    color: #eee;
+    margin-top: 10px;
+}
+
+.modalFooter{
+    border-width: 0;
+    justify-content: space-evenly;
+}
+
+.containerBotoesModal{
+    
+}
+
+.botoesModal{
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.botaoAtualizar{
+    background-color: green;
+    font-weight: bold;
+}
+
+.botaoCancelar{
+    background-color: #ff0000c7;
+    font-weight: bold;
+}

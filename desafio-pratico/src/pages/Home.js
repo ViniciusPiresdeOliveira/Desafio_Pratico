@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import "../styles/Header.css"
 import API from "../api/API"
 import { HabilidadeUsuario } from "../components/HabilidadeUsuario";
+import { VoltarTopo } from "../components/VoltarTopo";
 
 const Home = () => {
 
@@ -31,6 +32,7 @@ const Home = () => {
                     </div>
                 )
             })}
+            <VoltarTopo/>
 
         </>
     )

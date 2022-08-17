@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #585988;
 }
 
 .container-pai2{
@@ -15,22 +16,28 @@
 }
 
 a:-webkit-any-link {
-    color: blue;
+    color: white;
     text-decoration: none;
 }
 
 a:-webkit-any-link:hover {
-    color: red;
+    color: #ccc;
     text-decoration: none;
 }
 
 .tituloLogin {
     color: black;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 form label {
     color: black;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.form-control{
+    background-color: #ccc!important;
 }
 
 .text-success {
@@ -41,11 +48,38 @@ form label {
     border: 2px solid black;
     border-radius: 15px;
 }
-
-.botaoLogin {
-    background-color: black;
+.botaoSenha {
+    background-color: #232035a9;
     color: white;
-    padding: 2%;
+    padding: 1%;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.botaoSenha:hover{
+    background-color: #999ae2;
+    color: black;
+}
+
+.botaoLogin{
+    background-color: #232035;
+    color: white;
+    padding: 2% 42%;
     border-radius: 5px;
     margin-top: 5%;
+}
+
+.botaoLogin:hover{
+    background-color: #999ae2;
+    color: black;
+}
+
+.perguntaCadastro{
+    color: white;
+}
+.form-check{
+    text-align: left;
+    padding-top: 1%;
+
 }

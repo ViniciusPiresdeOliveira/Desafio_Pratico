@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#topo {
+    transition: transform 0.15s linear;
+    /* background-image: linear-gradient(to right, #831d1c, white, #016601); */
+    background-color: #120907;
+    color: white;
+    position: fixed;
+    right: 1%;
+    bottom: 12%;
+    animation: direcionando 0.5s ease-in-out alternate infinite;
+    padding: 1%;
+}
+/*
+.color1 {color: #120907;}
+.color2 {color: #232035;}
+.color3 {color: #585988;}
+.color4 {color: #999ae2;}
+.color5 {color: #d4d9ed;}*/
+#topo:hover {
+    box-shadow: 0 0 0.45em black;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.dark-mode #topo:hover {
+    box-shadow: 0 0 0.25em white;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#topo:focus-visible {
+    outline: 4px solid #831d1c;
+}
+
+.dark-mode #topo:focus-visible {
+    outline: 4px solid #00ff00;
+}
+
+@keyframes direcionando {
+    to {
+        transform: translateY(15px);
+    }
+}
