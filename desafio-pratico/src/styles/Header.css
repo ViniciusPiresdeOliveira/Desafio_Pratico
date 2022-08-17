@@ -1,0 +1,67 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header {
+    background-color: #232035;
+    padding: 1% 5%;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.dark-mode .header {
+    background-image: linear-gradient(#831d1c, #831d1c, #831d1c);
+}
+
+.home a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+}
+
+.home a:-webkit-any-link::selection {
+    background-color: black;
+    color: white;
+}
+
+.home a:-webkit-any-link:hover {
+    color: #ffffffa4;
+}
+
+.home a:-webkit-any-link:focus {
+    color: #ffffffa4;
+}
+
+.dark-mode .home a:-webkit-any-link {
+    color: #dca406;
+    text-decoration: none;
+    padding: 1%;
+}
+
+.dark-mode .home a:-webkit-any-link::selection {
+    background-color: #dca406;
+    color: #831d1c;
+}
+
+.dark-mode .home a:-webkit-any-link:hover {
+    color: #dca306a8;
+}
+
+.dark-mode .home a:-webkit-any-link:focus {
+    color: #dca306a8;
+}
+
+.home a:-webkit-any-link:focus-visible {
+    outline: 4px solid red;
+}
+
+.dark-mode .home a:-webkit-any-link:focus-visible {
+    outline: 4px solid #00ff00;
+}

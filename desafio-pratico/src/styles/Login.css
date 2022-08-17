@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-pai2{
+    text-align: center;
+}
+
+.container-login {
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+}
+
+a:-webkit-any-link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:-webkit-any-link:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.tituloLogin {
+    color: black;
+    padding-top: 5%;
+}
+
+form label {
+    color: black;
+}
+
+.text-success {
+    color: black !important;
+}
+
+.formulario {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.botaoLogin {
+    background-color: black;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+    margin-top: 5%;
+}
