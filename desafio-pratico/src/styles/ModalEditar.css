@@ -1,16 +1,16 @@
 .modal-content{
-    margin-top: 20%;
+    margin-top: 10%;
     background-color: #585988;
 }
 
 .containerModal{
-    background-color: transparent;
+    background-color: #5859880e;
 }
 
 .close{
     text-align: right;
     border-width: 0;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     background-color: #585988;
     color: white;
 }
@@ -21,13 +21,20 @@
 }
 
 .modalFooter{
-    border-width: 0;
-    justify-content: space-evenly;
+    border-width: 0!important;
+    justify-content: space-evenly!important;
+    background-color: #585988!important;
 }
 
-.containerBotoesModal{
-    
+.modal-footer{
+    border-width: 0!important;
+    justify-content: space-evenly!important;
+    background-color: #585988!important;
 }
+
+/* .containerBotoesModal{
+    
+} */
 
 .botoesModal{
     padding: 5px;
@@ -40,6 +47,24 @@
 }
 
 .botaoCancelar{
+    background-color: #ff0000c7;
+    font-weight: bold;
+}
+
+.fade.modal.show{
+    background-color: transparent;
+}
+
+.modal-header{
+    border-width: 0;
+}
+
+.adicionar{
+    background-color: green;
+    font-weight: bold;
+}
+
+.deletar{
     background-color: #ff0000c7;
     font-weight: bold;
 }

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import "../styles/UserSkills.css"
-import { Editar } from './Editar'
+import { EditarEDeletar } from './EditarEDeletar'
 
 export function HabilidadeUsuario({ id, name, version, description, imageUrl }) {
 
@@ -20,7 +20,7 @@ export function HabilidadeUsuario({ id, name, version, description, imageUrl }) 
                         </div>
                     </Row>
                 </Container>
-                <Editar />
+                <EditarEDeletar />
             </Container>
         </>
     )

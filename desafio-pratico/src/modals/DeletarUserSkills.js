@@ -1,68 +1,31 @@
 import { Modal, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { Input } from "reactstrap";
 import API from "../api/API";
 import "../styles/ModalEditar.css"
 
-export default function DeleterUserSkills({ show, handleClose }) {
-
+export default function DeletarUserSkills({ show, handleClose, acao, id }) {
+        
     return (
-        <Modal className="containerModal" show={show} onHide={handleClose}>
-            <button className="close" onClick={handleClose}>
-                <h3>X</h3>
-            </button>
-            <Modal.Body className='modalBody'>
+        <Modal style={{ marginTop: "9rem" }} show={show} onHide={handleClose}>
+            <Modal.Header>
+                <Modal.Title style={{ color: "white" }}>Deletar Skills</Modal.Title>
+                <button className="close" onClick={handleClose}>
+                    <h3>X</h3>
+                </button>
+            </Modal.Header>
+            <h3 style={{ fontSize: 17, padding: 20, color:"white" }}>Tem certeza que deseja deletar a Skill?</h3>
+            <Modal.Footer>
                 <div>
-                    <div className="informacoesAlteradas"><b>Nome*</b></div>
-                    <Input
-                        className="inputNome"
-                        type="text"
-                        placeholder="Nome"
-                    //   onChange={(e) => setNomeColaborador(e.target.value)}
-                    />
+                    <button
+                        className='adicionar botoesModal'
+                        onClick={(e) => acao(e)}
+                    >
+                        Confirmar
+                    </button>
                 </div>
-                <div className="styleDiv">
-                    <div className="informacoesAlteradas"><b>Versão*</b></div>
-                    <Input
-                        type="text"
-                        placeholder="Versão"
-                    //   onChange={(e) => setEMail(e.target.value)}
-                    />
-                </div>
-                <div className="inputFlex">
-                    <div className="styleDiv">
-                        <div className="informacoesAlteradas"><b>Descrição*</b></div>
-                        <Input
-                            type="text"
-                            placeholder="Descrição"
-                        // onChange={(e) => setAreaDeAtuacao(e.target.value)}
-                        />
-                    </div>
-                    <div className="styleDiv">
-                        <div className="informacoesAlteradas"><b>Imagem(URL)*</b></div>
-                        <Input
-                            type="text"
-                            placeholder="URL"
-                        // onChange={(e) => setObservacoes(e.target.value)}
-                        />
-                    </div>
-                </div>
-            </Modal.Body>
-            {/* <ModalColaboradorUpdateFotoAnexo identificadorId={identificadorId} tema={tema} /> */}
-            <Modal.Footer className="modalFooter">
-                <div>
-                    <div className="containerBotoesModal">
-                        <button
-                            className='botoesModal botaoAtualizar'
-                        // onClick={(e) => atualizarColaborador(e)}
-                        >
-                            {/* <img className="salvar" src={salvar} alt="neki" /> */}
-                            Atualizar
-                        </button>
-                    </div>
-                </div>
-                <div className="containerBotoesModal">
-                    <button className='botoesModal botaoCancelar' onClick={handleClose}  >
-                        {/* <img className="salvar" src={cancelar} alt="neki" /> */}
+                <div >
+                    <button className='deletar botoesModal' onClick={handleClose}>
                         Cancelar
                     </button>
                 </div>
