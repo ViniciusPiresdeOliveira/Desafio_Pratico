@@ -1,8 +1,34 @@
+import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
-import "../styles/UserSkills.css"
+import API from '../api/API';
+import DeletarSkills from '../modals/DeletarSkills'
+import "../styles/Skills.css"
 import { EditarEDeletar } from './EditarEDeletar'
 
 export function HabilidadeUsuario({ id, name, version, description, imageUrl }) {
+    const handleShow2 = () => setShow2(true);
+    const handleClose2 = () => setShow2(false);
+    const [show2, setShow2] = useState(false);
+
+    const abrirModal2 = () => {
+        handleShow2()
+    }
+
+    function deletar(e) {
+        e.preventDefault();
+        if (id === undefined) {
+            alert("Nada")
+            return;
+        }
+        API.delete(`/api/skills/${id}`)
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(error => console.log(error))
+            // handleClose2()
+            // navigate({ replace: true });
+            // window.location.reload();
+    }
 
     return (
         <>
@@ -21,6 +47,7 @@ export function HabilidadeUsuario({ id, name, version, description, imageUrl }) 
                     </Row>
                 </Container>
                 <EditarEDeletar />
+                {/* <DeletarUserSkills acao={(e) => deletar(e)} show={show2} handleClose={handleClose2}/> */}
             </Container>
         </>
     )

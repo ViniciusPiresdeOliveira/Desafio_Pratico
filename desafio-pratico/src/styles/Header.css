@@ -3,10 +3,16 @@ header {
     width: 100%;
     z-index: 1;
 }
+
 .adicionarSkill img{
     background-color: #232035;
     cursor: pointer;
     width: 58px;
+    transition: transform 0.1s linear;
+}
+
+.adicionarSkill img:hover{
+    transform: scale(1.11);
 }
 
 .header {

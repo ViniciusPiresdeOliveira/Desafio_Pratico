@@ -14,12 +14,12 @@ const Home = () => {
             setUserSkills(data)
         });
     })
-    const arrayUsers = userSkills;
+    const arraySkills = userSkills;
 
     return (
         <>
             <Header />
-            {arrayUsers.map((t, index) => {
+            {arraySkills.map((t, index) => {
                 return (
                     <div key={index}>
                         <HabilidadeUsuario

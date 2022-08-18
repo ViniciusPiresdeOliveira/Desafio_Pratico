@@ -1,8 +1,8 @@
 import "../styles/Editar.css"
 import edit from "../assets/icon-edit.png"
 import del from "../assets/icon-del.png"
-import EditarLevel from "../modals/EditarLevel"
-import DeletarUserSkills from "../modals/DeletarUserSkills"
+import EditarSkills from "../modals/EditarSkills"
+import DeletarSkills from "../modals/DeletarSkills"
 import { useState } from "react";
 import API from "../api/API"
 import { useNavigate } from "react-router-dom"
@@ -28,14 +28,18 @@ export function EditarEDeletar({id}) {
 
     function deletar(e) {
         e.preventDefault();
+        if (id === undefined) {
+            alert("Nada")
+            return;
+        }
         API.delete(`/api/skills/${id}`)
             .then(response => {
                 console.log(response.data)
             })
             .catch(error => console.log(error))
-            handleClose2()
-            navigate({ replace: true });
-            window.location.reload();
+            // handleClose2()
+            // navigate({ replace: true });
+            // window.location.reload();
     }
     
     return (
@@ -43,11 +47,11 @@ export function EditarEDeletar({id}) {
             <div className="botaoEditar" onClick={() => abrirModal1()} title="Editar Level">
                 <img className="alteracoes" src={edit} />
             </div>
-            <EditarLevel show={show1} handleClose={handleClose1}/>
+            <EditarSkills show={show1} handleClose={handleClose1}/>
             <div className="botaoDeletar" onClick={() => abrirModal2()} title="Excluir Skill">
                 <img className="alteracoes" src={del} />
             </div>
-            <DeletarUserSkills acao={(e) => deletar(e)} show={show2} handleClose={handleClose2}/>
+            <DeletarSkills acao={(e) => deletar(e)} show={show2} handleClose={handleClose2}/>
         </div >
     )
 }

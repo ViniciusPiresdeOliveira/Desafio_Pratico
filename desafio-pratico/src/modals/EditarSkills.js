@@ -1,26 +1,17 @@
+import { useEffect, useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import API from "../api/API";
 import "../styles/ModalEditar.css"
-import * as yup from "yup";
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
 import Input from "@material-ui/core/Input";
 
-export default function CriarUserSkills({ show, handleClose }) {
+export default function EditarSkills({ show, handleClose, id }) {
+
     const [name, setName] = useState();
     const [version, setVersion] = useState();
     const [description, setDescription] = useState();
     const [imageUrl, setImageUrl] = useState();
     var navigate = useNavigate();
-
-    // const validationPost = yup.object({
-    //     name: yup.string().required("Campo obrigatório !"),
-    //     version: yup.string().required("Campo obrigatório !"),
-    //     description: yup.string().required("Campo obrigatório !"),
-    //     imageUrl: yup.string().required("Campo obrigatório !"),
-    // }).required();
 
     const atualizar = () => {
         handleClose()
@@ -32,7 +23,7 @@ export default function CriarUserSkills({ show, handleClose }) {
 
     function cadastrarSkill(e) {
         e.preventDefault();
-        API.post(`/api/skills`, {
+        API.put(`/api/skills`, {
             name: name,
             version: version,
             description: description,
@@ -57,6 +48,12 @@ export default function CriarUserSkills({ show, handleClose }) {
                 }
             });
     }
+
+    // useEffect(() => {
+    //     API.get(`/api/skills/${id}`).then((response) => {
+    //         reset(response.data)
+    //     });
+    // }, [])
 
     return (
         <Modal className="containerModal" show={show} onHide={handleClose}>

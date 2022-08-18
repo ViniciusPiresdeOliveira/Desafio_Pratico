@@ -31,11 +31,6 @@
     color: white;
 }
 
-.dark-mode .columns::selection {
-    background-color: white;
-    color: #000000f2;
-}
-
 .containers {
     text-align: center;
     justify-content: center;
@@ -52,7 +47,7 @@
 }
 
 .containers:hover {
-    box-shadow: 0 0 0.80em #000000f2;
+    box-shadow: 0 0 1.2em #000000f2;
     transform: rotate(0.5deg);
 }
 

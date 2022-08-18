@@ -1,6 +1,3 @@
-.alteracoes{
-    /* display: flex; */
-}
 .alteracoes img{
     border-radius: 50%;
     padding: 10%;
@@ -11,10 +8,18 @@
 
 .botaoEditar img{
     background-color: #232035;
+    transition: transform 0.1s linear;
+}
+
+.botaoEditar img:hover,
+.botaoDeletar img:hover{
+    transform: scale(1.11);
+    box-shadow: 0 0 0.65em black;
 }
 
 .botaoDeletar img{
     background-color: red;
+    transition: transform 0.1s linear;
 }
 
 @media (max-width: 767px){
